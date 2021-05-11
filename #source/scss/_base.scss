@@ -1,0 +1,41 @@
+@import '_reset';
+@import '_fonts';
+@import '_variable';
+@import '_menu';
+
+
+//----- нАСЛЕДОВАНИЕ -----//
+// @extend
+
+body {
+  @include bg;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $body-max-width;
+  @include font-default;
+}
+
+// Главный контейнер
+.container {
+  width: 100%;
+  max-width: $max-width + 20px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+// Второй контейнер
+.container2 {
+  width: 100%;
+  max-width: $max-width + 20px;
+  margin: 0 auto;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+a.active {
+  color: #ff6464;
+}

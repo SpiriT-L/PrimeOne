@@ -1,0 +1,71 @@
+// @import '_fonts';
+//Переменные
+// Значения высоты и длинны
+$body-max-width: 1366px; //максимальная ширина body
+$max-width: 880px; //максимальная ширина container
+$min-width: 320px;
+//==================================================//
+
+// Breakpoints
+$xs: 0;
+$sm: 576px;   // mb5
+$md: 768px;   // mb4
+$lg: 992px;   // mb3
+$xl: 1200px;  // mb2
+$xxl: 1400px; // mb1
+
+//================ ЦВЕТ ==================================//
+// ----- ЦВЕТА ПРОЕКТА -----//
+$white: #fff;
+
+$header-bg: rgba(237, 247, 250, 1);
+
+// Background
+@mixin bg{
+  background: $white;        // задаём цвет background
+} 
+%header-bg{
+  background-color: $header-bg;   // задаём цвет headeer
+} 
+%footer-bg{
+  background-color: $header-bg;   // задаём цвет footer
+} 
+
+//================= ШРИФТЫ =================================//
+//  ----- ШРИФТЫ ПРОЕТКА ----- //
+// font-family: 'Bebas Neue', cursive;
+// font-family: 'PT Sans', sans-serif;
+// font-family: 'Space Grotesk', sans-serif;
+
+// ----- Шрифты по умолчанию ----- //
+@mixin font-default{
+  font-family: "PT Sans";
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//----------МЕНЮ------------------//
+// @extend
+// меню линк //
+%memu-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: right;
+  color: #000;
+  &:hover {
+    color: #ff6464;
+  }
+  &.active {
+    color: #ff6464;
+  }
+}
+
+// Отступ между ссылками //
+%margin-right {
+  margin: 0 33px 0 0;
+  &:last-child {
+    margin: 0 0 0 0;
+  }
+}
