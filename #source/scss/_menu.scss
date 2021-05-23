@@ -8,29 +8,37 @@
   // .header__container
 
   &__container {
-    max-width: 1200px;
+    // max-width: $max-width;
     margin: 0 auto;
-    display: flex;
+    // display: flex;
     padding: 0 30px;
     align-items: center;
     justify-content: space-between;
     min-height: 70px;
+    position: relative;
   }
 
   // .header__logo
 
   &__logo {
-    border-radius: 50%;
-    background-color: #fff;
-    position: relative;
+    // border-radius: 50%;
+    // background-color: #fff;
+    position: absolute;
     z-index: 5;
-    width: 40px;
-    height: 40px;
+    // width: 40px;
+    // height: 40px;
+    top: 44px;
+    left: 40%;
+    right: 50%;
+    &_item {
+      // position: absolute;
+    }
   }
 
   // .header__menu
 
   &__menu {
+    display: flex;
   }
 }
 .menu {
@@ -87,6 +95,7 @@
   // .menu__body
 
   &__body {
+    width: 100%;
     @media (max-width: $md) {
       position: fixed;
       top: 0;
@@ -205,8 +214,81 @@
   &__arrow {
     display: none;
   }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
+/* --------menu language------------ */
+
+.language {
+  margin: 26px 0 39px 9px;
+  & .menu {
+    // .menu__list
+
+    &__list {
+      &_item {
+        margin: 0 13px 0 0;
+        // padding: 0;
+        &:last-child {
+          margin: 0 0 0 0;
+        }
+      }
+    }
+
+    // .menu__link
+
+    &__link {
+      color: #000000;
+      font-family: Bebas;
+      font-size: 10px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: 1px;
+      padding: 3px;
+
+      // line-height: 25px;
+      line-height: normal;
+      text-align: left;
+      text-transform: uppercase;
+      &_active {
+        width: 100%;
+        height: 100%;
+        padding: 3px;
+        background-color: #000000;
+        color: #ffffff;
+        font-style: normal;
+        letter-spacing: 1px;
+        line-height: normal;
+      }
+      &:hover {
+        width: 100%;
+        height: 100%;
+        padding: 3px;
+        background-color: #000000;
+        color: #ffffff;
+        font-style: normal;
+        letter-spacing: 1px;
+        line-height: normal;
+      }
+    }
+  }
+}
+.ordering {
+  margin: 26px 0 39px 0;
+  padding: 3px 0 0 0;
+  color: #000000;
+  font-family: 'Akzidenz Grotesk BQ - Bd Cnd';
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 25px;
+  text-align: left;
+  text-transform: uppercase;
+}
 /* ---------------------------------- */
 body._pc .menu__list > li:hover .menu__sub-list {
   opacity: 1;
